@@ -1,9 +1,10 @@
 from flask import Flask
 application = Flask(__name__)
 
-@application.route("/hello")
+@application.route("/hello", methods=['GET'])
 def hello():
-    return "Hello World!"
+    operator = request.args.get('operator')
+    return operator
 
 if __name__ == "__main__":
     application.run()
