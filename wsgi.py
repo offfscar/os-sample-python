@@ -4,8 +4,8 @@ application = Flask(__name__)
 @application.route("/hello", methods=['GET'])
 def hello():
     operator = request.args.get('operator')
-    operator = request.args.get('num1')
-    operator = request.args.get('num2')
+    num1 = request.args.get('num1')
+    num2 = request.args.get('num2')
     return num1 + num2
 
 if __name__ == "__main__":
